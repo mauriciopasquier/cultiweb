@@ -1,0 +1,28 @@
+!!! 5
+%html{'xml:lang' => 'es_AR', 'xmlns' => 'http://www.w3.org/1999/xhtml'}
+  %head
+    %title= data.sitio.titulo
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    = stylesheet_link_tag     "application", media: 'all'
+    = javascript_include_tag  "application"
+    = csrf_meta_tags
+    = favicon_link_tag image_path('favicon.png'), type: 'image/png'
+    = favicon_link_tag image_path('favicon144.png'), type: 'image/png', rel: 'apple-touch-icon'
+  %body
+    #contenedor
+      #cabecera.navbar.navbar-inverse.navbar-fixed-top
+        .navbar-inner
+          .container-fluid
+            = link_to data.sitio.titulo, :root, class: 'brand'
+            %a.btn.btn-navbar{data: { toggle: "collapse", target: ".nav-collapse" }}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            .nav-collapse.collapse
+              %ul.nav
+                %li= link_to 'Algo', 'algo.html'
+                %li= link_to 'Otro', 'otro.html'
+      #contenido.container-fluid
+        .row-fluid
+          .span12
+            = yield

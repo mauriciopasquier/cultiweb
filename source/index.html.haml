@@ -1,0 +1,24 @@
+#myCarousel.carousel.slide
+  %ol.carousel-indicators
+    %li.active{data: { 'slide-to' => "0", 'target' => '#myCarousel'} }
+    %li{data: { 'slide-to' => "1", 'target' => '#myCarousel'} }
+    %li{data: { 'slide-to' => "2", 'target' => '#myCarousel'} }
+  .carousel-inner
+    .item.active
+      = lorem.image('800x200')
+      .carousel-caption
+        %h4 Primero
+        %p lorem.sentence
+    .item
+      = lorem.image('800x200')
+      .carousel-caption
+        %h4 Segundo
+        %p lorem.sentence
+    .item
+      = lorem.image('800x200')
+      .carousel-caption
+        %h4 Tercero
+        %p lorem.sentence
+
+  = link_to '‹' , '#myCarrousel', data: { slide: 'prev' }, class: 'left carousel-control'
+  = link_to '›' , '#myCarrousel', data: { slide: 'next' }, class: 'right carousel-control'

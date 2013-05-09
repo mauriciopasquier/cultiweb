@@ -1,5 +1,3 @@
-require 'bootstrap-sass'
-
 #compass_config do |config|
 #  config.http_path = '/'
 #  config.images_dir = 'img'
@@ -9,6 +7,8 @@ require 'bootstrap-sass'
 set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'img'
+
+set :haml, format: :html5
 
 # pretty urls
 activate :directory_indexes

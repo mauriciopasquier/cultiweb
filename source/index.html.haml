@@ -1,24 +1,26 @@
-#myCarousel.carousel.slide
+#calesita.carousel.slide
+
   %ol.carousel-indicators
-    %li.active{data: { 'slide-to' => "0", 'target' => '#myCarousel'} }
-    %li{data: { 'slide-to' => "1", 'target' => '#myCarousel'} }
-    %li{data: { 'slide-to' => "2", 'target' => '#myCarousel'} }
+    %li.active{data: { 'slide-to' => "0", 'target' => '#calesita'} }
+    %li{data: { 'slide-to' => "1", 'target' => '#calesita'} }
+    %li{data: { 'slide-to' => "2", 'target' => '#calesita'} }
+
   .carousel-inner
     .item.active
-      = lorem.image('800x200')
+      = image_tag lorem.image('1400x200')
       .carousel-caption
         %h4 Primero
-        %p lorem.sentence
+        %p= lorem.sentence
     .item
-      = lorem.image('800x200')
+      = image_tag lorem.image('1400x200')
       .carousel-caption
         %h4 Segundo
-        %p lorem.sentence
+        %p= lorem.sentence
     .item
-      = lorem.image('800x200')
+      = image_tag lorem.image('1400x200')
       .carousel-caption
         %h4 Tercero
-        %p lorem.sentence
+        %p= lorem.sentence
 
-  = link_to '‹' , '#myCarrousel', data: { slide: 'prev' }, class: 'left carousel-control'
-  = link_to '›' , '#myCarrousel', data: { slide: 'next' }, class: 'right carousel-control'
+  = link_to '‹' , '#calesita', data: { slide: 'prev' }, class: 'left carousel-control'
+  = link_to '›' , '#calesita', data: { slide: 'next' }, class: 'right carousel-control'

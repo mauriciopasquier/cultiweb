@@ -1,26 +1,20 @@
-#calesita.carousel.slide
+%h1 Controlador de cultivos de interior
 
-  %ol.carousel-indicators
-    %li.active{data: { 'slide-to' => "0", 'target' => '#calesita'} }
-    %li{data: { 'slide-to' => "1", 'target' => '#calesita'} }
-    %li{data: { 'slide-to' => "2", 'target' => '#calesita'} }
+= partial 'calesita'
+= partial 'cajas'
 
-  .carousel-inner
-    .item.active
-      = image_tag lorem.image('1400x200')
-      .carousel-caption
-        %h4 Primero
-        %p= lorem.sentence
-    .item
-      = image_tag lorem.image('1400x200')
-      .carousel-caption
-        %h4 Segundo
-        %p= lorem.sentence
-    .item
-      = image_tag lorem.image('1400x200')
-      .carousel-caption
-        %h4 Tercero
-        %p= lorem.sentence
+.row-fluid.libertad
+  .span6.soft
+    = image_tag(lorem.image('500x500', text: 'Software libre'))
+  .span6.hard
+    = image_tag(lorem.image('500x500', text: 'Hardware libre'))
 
-  = link_to '‹' , '#calesita', data: { slide: 'prev' }, class: 'left carousel-control'
-  = link_to '›' , '#calesita', data: { slide: 'next' }, class: 'right carousel-control'
+.row-fluid
+  .caja
+    .span12
+      %p= lorem.paragraph
+
+.row-fluid.ventas
+  .caja
+    .span12
+      %p ventas at cultibot.com.ar

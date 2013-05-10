@@ -1,0 +1,34 @@
+.row-fluid
+  .span12
+    #calesita.carousel.slide
+
+      %ol.carousel-indicators
+        %li.active{data: { 'slide-to' => "0", 'target' => '#calesita'} }
+        %li{data: { 'slide-to' => "1", 'target' => '#calesita'} }
+        %li{data: { 'slide-to' => "2", 'target' => '#calesita'} }
+        %li{data: { 'slide-to' => "3", 'target' => '#calesita'} }
+
+      .carousel-inner
+        .item.active
+          = image_tag lorem.image('1600x400')
+          .carousel-caption
+            %h4 Iluminación
+            %p= lorem.sentence
+        .item
+          = image_tag lorem.image('1600x400')
+          .carousel-caption
+            %h4 Riego
+            %p= lorem.sentence
+        .item
+          = image_tag lorem.image('1600x400')
+          .carousel-caption
+            %h4 Calefacción
+            %p= lorem.sentence
+        .item
+          = image_tag lorem.image('1600x400')
+          .carousel-caption
+            %h4 Ventilación
+            %p= lorem.sentence
+
+      = link_to '‹' , '#calesita', data: { slide: 'prev' }, class: 'left carousel-control'
+      = link_to '›' , '#calesita', data: { slide: 'next' }, class: 'right carousel-control'

@@ -1,2 +1,40 @@
 @import "bootstrap";
+
+body {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+h2 {
+  visibility: hidden;
+}
+
+.caja {
+  font-size: xx-large;
+  line-height: 2em;
+}
+
+.libertad {
+  img {
+    margin-top: 5em;
+  }
+  .hard {
+    text-align: right;
+  }
+}
+
+.ventas {
+  background: yellow;
+  padding: 4em 0;
+  text-align: center;
+}
+
 @import "bootstrap-responsive";
+
+@media (max-width: 800px) {
+  .libertad {
+    .hard {
+      text-align: left;
+    }
+  }
+}
